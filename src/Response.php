@@ -133,7 +133,7 @@ class Response implements ApnsResponseInterface
      * @param string $headers
      * @param string $body
      */
-    public function __construct(int $statusCode, string $headers, string $body)
+    public function __construct(int $statusCode, $headers, $body)
     {
         $this->statusCode = $statusCode;
         $this->apnsId = self::fetchApnsId($headers);
@@ -146,7 +146,7 @@ class Response implements ApnsResponseInterface
      * @param string $headers
      * @return string
      */
-    private static function fetchApnsId(string $headers): string
+    private static function fetchApnsId($headers): string
     {
         $data = explode("\n", trim($headers));
 
@@ -169,9 +169,9 @@ class Response implements ApnsResponseInterface
      * @param string $body
      * @return string
      */
-    private static function fetchErrorReason(string $body): string
+    private static function fetchErrorReason($body): string
     {
-        return json_decode($body, true)['reason'] ?: '';
+        return json_decode(trim($body), true)['reason'] ?: '';
     }
 
     /**
