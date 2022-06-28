@@ -25,7 +25,7 @@
         "ext-openssl": "*",
         "lib-openssl": ">=1.0.2.5",
         "ext-xml": "*",
-        "spomky-labs/jose": "^6.1.1"
+        "spomky-labs/jose": "^7.1.0"
     },
     "require-dev": {
         "ext-xdebug": "*",
