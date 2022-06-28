@@ -24,7 +24,6 @@
         "lib-curl": ">=7.46.0",
         "ext-openssl": "*",
         "lib-openssl": ">=1.0.2.5",
-        "ext-gmp": "*",
         "ext-xml": "*",
         "ext-intl": "*",
         "spomky-labs/jose": "^6.1.1"
